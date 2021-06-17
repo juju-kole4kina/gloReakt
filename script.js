@@ -2,7 +2,7 @@
 
 const employers = ['АртеМ', 'максим', 'Владимир', 'сергей', 'НикиТа', 'евГений', ' Дарья', ' ', 'виктория ', 'ЕкаТерина', '', ' Андрей ', 'КИРИЛЛ'],
 	nameCourse = 'Базовый React',
-	command = employers.filter(item => item.trim() !== '').map(str => str.trim().charAt(0).toUpperCase() + str.trim().slice(1).toLowerCase()).join(',');
+	command = employers.filter(item => item.trim() !== '').map(str => str.trim().charAt(0).toUpperCase() + str.trim().slice(1).toLowerCase()).join(', ');
 
 const data = {
 	cash: [3, 8, 3],
@@ -19,7 +19,7 @@ const lesson = calcCash(cash);
 const makeBusiness = (director, allModule, gang, course, teacher = 'Максим') => {
 	const sumTech = [...react, ...add, 'и другие'];
 	console.log(`Стартуем новый курс: "${course}". Владелец: ${director}, преподаватель: ${teacher}. Всего уроков: ${allModule}.
-	Команда Академии: ${gang}`);
+Команда Академии: ${gang}`);
 	console.log(`Первое что изучим будет ${data.react[0]}. Он очень похож на HTML!`);
 	console.log(`Технологии которые мы изучим: `);
 	console.log(...sumTech);
